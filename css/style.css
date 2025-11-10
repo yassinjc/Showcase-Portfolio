@@ -159,7 +159,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 6vw 2vw 2vw;
+    padding: 6vw 2vw 6vw;
 }
 
 .contact-content {
@@ -212,6 +212,14 @@ body {
 .contact-icons img:hover {
     opacity: 1;
     transform: scale(1.05);
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('/assets/images/contact-overlay.png') center 35% / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
 }
 
 
