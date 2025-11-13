@@ -38,3 +38,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showSlide(current);
 });
+
+// SwiperJS Configuratie
+const swiper = new Swiper('.projects-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 60,
+    centeredSlides: true,
+    loop: false,
+    initialSlide: 1,
+    grabCursor: true,
+    slideToClickedSlide: true,
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.projects-next',
+        prevEl: '.projects-prev',
+    },
+
+    breakpoints: {
+        0: { slidesPerView: 1, spaceBetween: 20 },
+        700: { slidesPerView: 1.6, spaceBetween: 40 },
+        1100: { slidesPerView: 2.5, spaceBetween: 50 },
+        1400: { slidesPerView: 3, spaceBetween: 60 },
+    }
+});

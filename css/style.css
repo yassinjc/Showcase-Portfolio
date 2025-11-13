@@ -172,8 +172,11 @@ body {
 }
 
 .contact-overlay {
+    position: absolute;
+    inset: 0;
     background: url("/assets/images/contact-overlay.png") center / cover no-repeat;
     opacity: 0.35;
+    pointer-events: none;
 }
 
 .contact-content {
@@ -254,8 +257,11 @@ body {
 }
 
 .about-overlay {
+    position: absolute;
+    inset: 0;
     background: url("/assets/images/about-me-overlay.png") center 55% / cover no-repeat;
     opacity: 0.35;
+    pointer-events: none;
 }
 
 .about-content {
@@ -314,8 +320,11 @@ body {
 }
 
 .process-overlay {
+    position: absolute;
+    inset: 0;
     background: url("/assets/images/process-overlay.png") center 55% / cover no-repeat;
     opacity: 0.5;
+    pointer-events: none;
 }
 
 .process-wrapper {
@@ -407,8 +416,8 @@ body {
 .process-arrows {
     position: absolute;
     top: 50%;
-    left: 3vw;
-    right: 3vw;
+    left: 10vw;
+    right: 10vw;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
@@ -423,7 +432,7 @@ body {
 
 .process-prev img,
 .process-next img {
-    width: clamp(20px, 1.6vw, 26px);
+    width: clamp(10px, 1vw, 4px);
     opacity: 0.8;
     transition: opacity var(--transition-quick), transform var(--transition-quick);
 }
@@ -467,4 +476,136 @@ body {
 .process-slide.reversed .process-right {
     order: 1;
     justify-content: flex-end;
+}
+
+
+/* Projectensectie */
+.projects-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 8vw 0 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-overlay {
+    position: absolute;
+    inset: 0;
+    background: url('/assets/images/projects-overlay.png') center / cover no-repeat;
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.projects-swiper {
+    width: 80vw;
+    max-width: 1400px;
+    position: relative;
+    overflow: visible !important;
+}
+
+.projects-swiper .swiper-slide {
+    width: clamp(260px, 26vw, 360px);
+    opacity: 0.55;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.projects-swiper .swiper-slide-active {
+    opacity: 0.9;
+}
+
+.project-card {
+    text-align: center;
+    color: var(--text);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: scale(0.8) translateY(10px);
+    opacity: 0.6;
+}
+
+.projects-swiper .swiper-slide-active.project-card {
+    transform: scale(1.1) translateY(0);
+    opacity: 0.9;
+}
+
+.project-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
+}
+
+.project-title {
+    font-size: var(--fs-title);
+    font-weight: 100;
+    letter-spacing: var(--letter);
+    margin-bottom: -0.6vw;
+    margin-top: 0.5vw;
+}
+
+.project-sub {
+    font-size: var(--fs-xs);
+    color: #919191;
+    letter-spacing: 0.15em;
+}
+
+.projects-prev,
+.projects-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    cursor: pointer;
+}
+
+.projects-prev {
+    left: -3vw;
+}
+
+.projects-next {
+    right: -3vw;
+}
+
+.projects-prev img,
+.projects-next img {
+    width: clamp(10px, 1vw, 4px);
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.projects-prev:hover img {
+    opacity: 1;
+    transform: translateX(-1px);
+}
+
+.projects-next:hover img {
+    opacity: 1;
+    transform: translateX(1px);
+}
+
+.swiper-pagination {
+    bottom: -55px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.35) !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff75 !important;
+    transform: scale(1.35);
 }

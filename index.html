@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -79,7 +80,56 @@
             </div>
         </section>
 
-        <section id="projects" class="placeholder"></section>
+
+        <!-- Projectensectie -->
+        <section id="projects" class="projects-section">
+            <div class="projects-overlay"></div>
+
+            <div class="swiper projects-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Project 1 -->
+                    <div class="swiper-slide project-card">
+                        <div class="project-img">
+                            <img src="/assets/images/ar-jane-pic.png" />
+                        </div>
+                        <h3 class="project-title">AR-JANE WEBSITE</h3>
+                        <p class="project-sub"><em>SEMESTER 2, GROUP PROJECT</em></p>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="swiper-slide project-card">
+                        <div class="project-img">
+                            <img src="/assets/images/ict-ethics-pic.png" />
+                        </div>
+                        <h3 class="project-title">ICT ETHICS NAVIGATOR</h3>
+                        <p class="project-sub"><em>SEMESTER 6, INTERNSHIP PROJECT</em></p>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="swiper-slide project-card">
+                        <div class="project-img">
+                            <img src="/assets/images/rayshree-pic.png" />
+                        </div>
+                        <h3 class="project-title">RAYSHREE WEBSITE</h3>
+                        <p class="project-sub"><em>SEMESTER 3, PASSION PROJECT</em></p>
+                    </div>
+
+                </div>
+
+                <!-- Indicator -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Pijlen -->
+                <div class="projects-prev">
+                    <img src="/assets/icons/chevron-left.svg" />
+                </div>
+                <div class="projects-next">
+                    <img src="/assets/icons/chevron-right.svg" />
+                </div>
+            </div>
+        </section>
+
 
 
         <!-- Proces Sectie -->
@@ -191,10 +241,10 @@
 
             <div class="process-arrows">
                 <button class="process-prev" aria-label="Previous phase">
-                    <img class="chev-icon" src="/assets/icons/proces-chevron-left.svg" alt="">
+                    <img class="chev-icon" src="/assets/icons/chevron-left.svg" alt="">
                 </button>
                 <button class="process-next" aria-label="Next phase">
-                    <img class="chev-icon" src="/assets/icons/proces-chevron-right.svg" alt="">
+                    <img class="chev-icon" src="/assets/icons/chevron-right.svg" alt="">
                 </button>
             </div>
 
@@ -237,6 +287,8 @@
     </main>
 
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
 <script src="/js/script.js"></script>
 
