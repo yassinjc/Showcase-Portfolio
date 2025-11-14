@@ -46,7 +46,7 @@ const swiper = new Swiper('.projects-swiper', {
     centeredSlides: true,
     loop: false,
     initialSlide: 1,
-    grabCursor: true,
+    grabCursor: false,
     slideToClickedSlide: true,
 
     pagination: {
